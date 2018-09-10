@@ -1,0 +1,5 @@
+rootProject.name = 'first-gradle'
+include 'module-one'
+include 'module-two'
+include 'first-web'
+

@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'lys.gradle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile project(':module-one')
+}

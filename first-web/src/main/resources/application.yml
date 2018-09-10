@@ -1,0 +1,17 @@
+#server:
+#  ssl:
+#    key-store: classpath:sample.jks
+#    key-store-password: secret
+#    key-password: password
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+
+#spring:
+#  security:
+#    user:
+#      name: user
+#      password: password
+
