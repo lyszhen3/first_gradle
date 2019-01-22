@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @version 3.0.0-SNAPSHOT
  * @since 3.0.0-SNAPSHOT
  */
-@EnableWebMvc
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 
@@ -24,5 +23,8 @@ public class MvcConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		//  /css/** 将资源目录resources/static/css 映射到 /css/** 访问路径
+//		registry.addResourceHandler("/css/**").addResourceLocations("classpath:static/css/");
+
 	}
 }
