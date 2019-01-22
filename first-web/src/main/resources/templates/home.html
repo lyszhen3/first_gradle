@@ -3,7 +3,19 @@
 <head>
 <title th:text="${title}">Title</title>
 <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"
-	href="../../css/bootstrap.min.css" />
+   href="../../css/bootstrap.min.css" />
+<script>
+	window.onload = function () {
+		var source = new EventSource('http://localhost:8080/testSSE');
+		source.addEventListener('message',function(e){
+		    console.log(e);
+         });
+         source.addEventListener('open',function(e){
+         	console.log(e)
+         },false);
+	}
+
+</script>
 </head>
 <body>
 	<div class="container">

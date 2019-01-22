@@ -1,5 +1,6 @@
 package com.lin.service;
 
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -22,10 +23,11 @@ import java.util.List;
 public class DummyUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		//模拟来自db
+		//模拟来自db 跟局username 查询db中的用户和该用户所拥有角色
 		SimpleGrantedAuthority simpleGrantedAuthority = new SimpleGrantedAuthority("ROLE_US");
 		List<GrantedAuthority> roleList = new ArrayList<>(10);
 		roleList.add(simpleGrantedAuthority);
-		return new User("user","password1", roleList);
+
+		return new User("user", "user", roleList);
 	}
 }
